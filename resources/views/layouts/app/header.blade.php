@@ -1,7 +1,7 @@
   <nav class="nxl-navigation">
         <div class="navbar-wrapper">
             <div class="m-header">
-                <a href="index.html" class="b-brand">
+                <a href="{{ route('admin.dashboard') }}" class="b-brand">
                     <!-- ========   change your logo hear   ============ -->
                     <img src="assets/images/logo-full.png" alt="" class="logo logo-lg" />
                     <img src="assets/images/logo-abbr.png" alt="" class="logo logo-sm" />
@@ -12,220 +12,28 @@
                     <li class="nxl-item nxl-caption">
                         <label>Navigation</label>
                     </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-airplay"></i></span>
-                            <span class="nxl-mtext">Dashboards</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
+                    <li class="nxl-item">
+                        <a href="{{ route('admin.dashboard') }}" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-home"></i></span>
+                            <span class="nxl-mtext">Dashboard</span>
                         </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="index.html">CRM</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="analytics.html">Analytics</a></li>
-                        </ul>
                     </li>
+              
+                
+           
                     <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-cast"></i></span>
-                            <span class="nxl-mtext">Reports</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                        </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="reports-sales.html">Sales Report</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="reports-leads.html">Leads Report</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="reports-project.html">Project Report</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="reports-timesheets.html">Timesheets Report</a></li>
-                        </ul>
-                    </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-send"></i></span>
-                            <span class="nxl-mtext">Applications</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                        </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="apps-chat.html">Chat</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="apps-email.html">Email</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="apps-tasks.html">Tasks</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="apps-notes.html">Notes</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="apps-storage.html">Storage</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="apps-calendar.html">Calendar</a></li>
-                        </ul>
-                    </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-at-sign"></i></span>
-                            <span class="nxl-mtext">Proposal</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                        </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="proposal.html">Proposal</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="proposal-view.html">Proposal View</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="proposal-edit.html">Proposal Edit</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="proposal-create.html">Proposal Create</a></li>
-                        </ul>
-                    </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-dollar-sign"></i></span>
-                            <span class="nxl-mtext">Payment</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                        </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="payment.html">Payment</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="invoice-view.html">Invoice View</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="invoice-create.html">Invoice Create</a></li>
-                        </ul>
-                    </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
+                        <a href="{{ route('admin.leads.index') }}" class="nxl-link">
                             <span class="nxl-micon"><i class="feather-users"></i></span>
-                            <span class="nxl-mtext">Customers</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                        </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="customers.html">Customers</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="customers-view.html">Customers View</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="customers-create.html">Customers Create</a></li>
-                        </ul>
-                    </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-alert-circle"></i></span>
                             <span class="nxl-mtext">Leads</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
                         </a>
                         <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="leads.html">Leads</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="leads-view.html">Leads View</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="leads-create.html">Leads Create</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.leads.index') }}">All Leads</a></li>
+                            <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.leads.create') }}">Add New Lead</a></li>
                         </ul>
                     </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-briefcase"></i></span>
-                            <span class="nxl-mtext">Projects</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                        </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="projects.html">Projects</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="projects-view.html">Projects View</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="projects-create.html">Projects Create</a></li>
-                        </ul>
-                    </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-layout"></i></span>
-                            <span class="nxl-mtext">Widgets</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                        </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="widgets-lists.html">Lists</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="widgets-tables.html">Tables</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="widgets-charts.html">Charts</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="widgets-statistics.html">Statistics</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="widgets-miscellaneous.html">Miscellaneous</a></li>
-                        </ul>
-                    </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-settings"></i></span>
-                            <span class="nxl-mtext">Settings</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                        </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="settings-general.html">General</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-seo.html">SEO</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-tags.html">Tags</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-email.html">Email</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-tasks.html">Tasks</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-leads.html">Leads</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-support.html">Support</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-finance.html">Finance</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-gateways.html">Gateways</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-customers.html">Customers</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-localization.html">Localization</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-recaptcha.html">reCAPTCHA</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="settings-miscellaneous.html">Miscellaneous</a></li>
-                        </ul>
-                    </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-power"></i></span>
-                            <span class="nxl-mtext">Authentication</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                        </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item nxl-hasmenu">
-                                <a href="javascript:void(0);" class="nxl-link">
-                                    <span class="nxl-mtext">Login</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                                </a>
-                                <ul class="nxl-submenu">
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-login-cover.html">Cover</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-login-minimal.html">Minimal</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-login-creative.html">Creative</a></li>
-                                </ul>
-                            </li>
-                            <li class="nxl-item nxl-hasmenu">
-                                <a href="javascript:void(0);" class="nxl-link">
-                                    <span class="nxl-mtext">Register</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                                </a>
-                                <ul class="nxl-submenu">
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-register-cover.html">Cover</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-register-minimal.html">Minimal</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-register-creative.html">Creative</a></li>
-                                </ul>
-                            </li>
-                            <li class="nxl-item nxl-hasmenu">
-                                <a href="javascript:void(0);" class="nxl-link">
-                                    <span class="nxl-mtext">Error-404</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                                </a>
-                                <ul class="nxl-submenu">
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-404-cover.html">Cover</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-404-minimal.html">Minimal</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-404-creative.html">Creative</a></li>
-                                </ul>
-                            </li>
-                            <li class="nxl-item nxl-hasmenu">
-                                <a href="javascript:void(0);" class="nxl-link">
-                                    <span class="nxl-mtext">Reset Pass</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                                </a>
-                                <ul class="nxl-submenu">
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-reset-cover.html">Cover</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-reset-minimal.html">Minimal</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-reset-creative.html">Creative</a></li>
-                                </ul>
-                            </li>
-                            <li class="nxl-item nxl-hasmenu">
-                                <a href="javascript:void(0);" class="nxl-link">
-                                    <span class="nxl-mtext">Verify OTP</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                                </a>
-                                <ul class="nxl-submenu">
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-verify-cover.html">Cover</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-verify-minimal.html">Minimal</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-verify-creative.html">Creative</a></li>
-                                </ul>
-                            </li>
-                            <li class="nxl-item nxl-hasmenu">
-                                <a href="javascript:void(0);" class="nxl-link">
-                                    <span class="nxl-mtext">Maintenance</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                                </a>
-                                <ul class="nxl-submenu">
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-maintenance-cover.html">Cover</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-maintenance-minimal.html">Minimal</a></li>
-                                    <li class="nxl-item"><a class="nxl-link" href="./auth-maintenance-creative.html">Creative</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="javascript:void(0);" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-life-buoy"></i></span>
-                            <span class="nxl-mtext">Help Center</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                        </a>
-                        <ul class="nxl-submenu">
-                            <li class="nxl-item"><a class="nxl-link" href="https://themeforest.net/user/theme_ocean/">Support</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="help-knowledgebase.html">KnowledgeBase</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href=".docs/documentations.html">Documentations</a></li>
-                        </ul>
-                    </li>
+          
                 </ul>
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="feather-sunrise fs-4 text-dark"></i>
-                        <h6 class="mt-4 text-dark fw-bolder">Downloading Center</h6>
-                        <p class="fs-11 my-3 text-dark">Duralux is a production ready CRM to get started up and running easily.</p>
-                        <a href="javascript:void(0);" class="btn btn-primary text-dark w-100">Download Now</a>
-                    </div>
-                </div>
+           
             </div>
         </div>
     </nav>
@@ -276,142 +84,12 @@
                                 <i class="feather-plus"></i>
                             </a>
                             <div class="dropdown-menu nxl-h-dropdown">
-                                <div class="dropdown nxl-level-menu">
-                                    <a href="javascript:void(0);" class="dropdown-item">
-                                        <span class="hstack">
-                                            <i class="feather-send"></i>
-                                            <span>Applications</span>
-                                        </span>
-                                        <i class="feather-chevron-right ms-auto me-0"></i>
-                                    </a>
-                                    <div class="dropdown-menu nxl-h-dropdown">
-                                        <a href="apps-chat.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Chat</span>
-                                        </a>
-                                        <a href="apps-email.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Email</span>
-                                        </a>
-                                        <a href="apps-tasks.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Tasks</span>
-                                        </a>
-                                        <a href="apps-notes.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Notes</span>
-                                        </a>
-                                        <a href="apps-storage.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Storage</span>
-                                        </a>
-                                        <a href="apps-calendar.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Calendar</span>
-                                        </a>
-                                    </div>
-                                </div>
+                                <a href="{{ route('admin.dashboard') }}" class="dropdown-item">
+                                    <i class="feather-home"></i>
+                                    <span>Dashboard</span>
+                                </a>
                                 <div class="dropdown-divider"></div>
-                                <div class="dropdown nxl-level-menu">
-                                    <a href="javascript:void(0);" class="dropdown-item">
-                                        <span class="hstack">
-                                            <i class="feather-cast"></i>
-                                            <span>Reports</span>
-                                        </span>
-                                        <i class="feather-chevron-right ms-auto me-0"></i>
-                                    </a>
-                                    <div class="dropdown-menu nxl-h-dropdown">
-                                        <a href="reports-sales.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Sales Report</span>
-                                        </a>
-                                        <a href="reports-leads.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Leads Report</span>
-                                        </a>
-                                        <a href="reports-project.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Project Report</span>
-                                        </a>
-                                        <a href="reports-timesheets.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Timesheets Report</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="dropdown nxl-level-menu">
-                                    <a href="javascript:void(0);" class="dropdown-item">
-                                        <span class="hstack">
-                                            <i class="feather-at-sign"></i>
-                                            <span>Proposal</span>
-                                        </span>
-                                        <i class="feather-chevron-right ms-auto me-0"></i>
-                                    </a>
-                                    <div class="dropdown-menu nxl-h-dropdown">
-                                        <a href="proposal.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Proposal</span>
-                                        </a>
-                                        <a href="proposal-view.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Proposal View</span>
-                                        </a>
-                                        <a href="proposal-edit.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Proposal Edit</span>
-                                        </a>
-                                        <a href="proposal-create.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Proposal Create</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="dropdown nxl-level-menu">
-                                    <a href="javascript:void(0);" class="dropdown-item">
-                                        <span class="hstack">
-                                            <i class="feather-dollar-sign"></i>
-                                            <span>Payment</span>
-                                        </span>
-                                        <i class="feather-chevron-right ms-auto me-0"></i>
-                                    </a>
-                                    <div class="dropdown-menu nxl-h-dropdown">
-                                        <a href="payment.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Payment</span>
-                                        </a>
-                                        <a href="invoice-view.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Invoice View</span>
-                                        </a>
-                                        <a href="invoice-create.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Invoice Create</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="dropdown nxl-level-menu">
-                                    <a href="javascript:void(0);" class="dropdown-item">
-                                        <span class="hstack">
-                                            <i class="feather-users"></i>
-                                            <span>Customers</span>
-                                        </span>
-                                        <i class="feather-chevron-right ms-auto me-0"></i>
-                                    </a>
-                                    <div class="dropdown-menu nxl-h-dropdown">
-                                        <a href="customers.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Customers</span>
-                                        </a>
-                                        <a href="customers-view.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Customers View</span>
-                                        </a>
-                                        <a href="customers-create.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Customers Create</span>
-                                        </a>
-                                    </div>
-                                </div>
+                         
                                 <div class="dropdown nxl-level-menu">
                                     <a href="javascript:void(0);" class="dropdown-item">
                                         <span class="hstack">
@@ -421,223 +99,21 @@
                                         <i class="feather-chevron-right ms-auto me-0"></i>
                                     </a>
                                     <div class="dropdown-menu nxl-h-dropdown">
-                                        <a href="leads.html" class="dropdown-item">
+                                        <a href="{{ route('admin.leads.index') }}" class="dropdown-item">
                                             <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Leads</span>
+                                            <span>All Leads</span>
                                         </a>
-                                        <a href="leads-view.html" class="dropdown-item">
+                                        <a href="{{ route('admin.leads.create') }}" class="dropdown-item">
                                             <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Leads View</span>
-                                        </a>
-                                        <a href="leads-create.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Leads Create</span>
+                                            <span>Add New Lead</span>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="dropdown nxl-level-menu">
-                                    <a href="javascript:void(0);" class="dropdown-item">
-                                        <span class="hstack">
-                                            <i class="feather-briefcase"></i>
-                                            <span>Projects</span>
-                                        </span>
-                                        <i class="feather-chevron-right ms-auto me-0"></i>
-                                    </a>
-                                    <div class="dropdown-menu nxl-h-dropdown">
-                                        <a href="projects.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Projects</span>
-                                        </a>
-                                        <a href="projects-view.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Projects View</span>
-                                        </a>
-                                        <a href="projects-create.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Projects Create</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="dropdown nxl-level-menu">
-                                    <a href="javascript:void(0);" class="dropdown-item">
-                                        <span class="hstack">
-                                            <i class="feather-layout"></i>
-                                            <span>Widgets</span>
-                                        </span>
-                                        <i class="feather-chevron-right ms-auto me-0"></i>
-                                    </a>
-                                    <div class="dropdown-menu nxl-h-dropdown">
-                                        <a href="widgets-lists.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Lists</span>
-                                        </a>
-                                        <a href="widgets-tables.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Tables</span>
-                                        </a>
-                                        <a href="widgets-charts.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Charts</span>
-                                        </a>
-                                        <a href="widgets-statistics.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Statistics</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="dropdown nxl-level-menu">
-                                    <a href="javascript:void(0);" class="dropdown-item">
-                                        <span class="hstack">
-                                            <i class="feather-power"></i>
-                                            <span>Authentication</span>
-                                        </span>
-                                        <i class="feather-chevron-right ms-auto me-0"></i>
-                                    </a>
-                                    <div class="dropdown-menu nxl-h-dropdown">
-                                        <div class="dropdown nxl-level-menu">
-                                            <a href="javascript:void(0);" class="dropdown-item">
-                                                <span class="hstack">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Login</span>
-                                                </span>
-                                                <i class="feather-chevron-right ms-auto me-0"></i>
-                                            </a>
-                                            <div class="dropdown-menu nxl-h-dropdown">
-                                                <a href="./auth-login-cover.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Cover</span>
-                                                </a>
-                                                <a href="./auth-login-minimal.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Minimal</span>
-                                                </a>
-                                                <a href="./auth-login-creative.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Creative</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown nxl-level-menu">
-                                            <a href="javascript:void(0);" class="dropdown-item">
-                                                <span class="hstack">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Register</span>
-                                                </span>
-                                                <i class="feather-chevron-right ms-auto me-0"></i>
-                                            </a>
-                                            <div class="dropdown-menu nxl-h-dropdown">
-                                                <a href="./auth-register-cover.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Cover</span>
-                                                </a>
-                                                <a href="./auth-register-minimal.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Minimal</span>
-                                                </a>
-                                                <a href="./auth-register-creative.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Creative</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown nxl-level-menu">
-                                            <a href="javascript:void(0);" class="dropdown-item">
-                                                <span class="hstack">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Error-404</span>
-                                                </span>
-                                                <i class="feather-chevron-right ms-auto me-0"></i>
-                                            </a>
-                                            <div class="dropdown-menu nxl-h-dropdown">
-                                                <a href="./auth-404-cover.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Cover</span>
-                                                </a>
-                                                <a href="./auth-404-minimal.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Minimal</span>
-                                                </a>
-                                                <a href="./auth-404-creative.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Creative</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown nxl-level-menu">
-                                            <a href="javascript:void(0);" class="dropdown-item">
-                                                <span class="hstack">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Reset Pass</span>
-                                                </span>
-                                                <i class="feather-chevron-right ms-auto me-0"></i>
-                                            </a>
-                                            <div class="dropdown-menu nxl-h-dropdown">
-                                                <a href="./auth-reset-cover.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Cover</span>
-                                                </a>
-                                                <a href="./auth-reset-minimal.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Minimal</span>
-                                                </a>
-                                                <a href="./auth-reset-creative.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Creative</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown nxl-level-menu">
-                                            <a href="javascript:void(0);" class="dropdown-item">
-                                                <span class="hstack">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Verify OTP</span>
-                                                </span>
-                                                <i class="feather-chevron-right ms-auto me-0"></i>
-                                            </a>
-                                            <div class="dropdown-menu nxl-h-dropdown">
-                                                <a href="./auth-verify-cover.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Cover</span>
-                                                </a>
-                                                <a href="./auth-verify-minimal.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Minimal</span>
-                                                </a>
-                                                <a href="./auth-verify-creative.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Creative</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="dropdown nxl-level-menu">
-                                            <a href="javascript:void(0);" class="dropdown-item">
-                                                <span class="hstack">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Maintenance</span>
-                                                </span>
-                                                <i class="feather-chevron-right ms-auto me-0"></i>
-                                            </a>
-                                            <div class="dropdown-menu nxl-h-dropdown">
-                                                <a href="./auth-maintenance-cover.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Cover</span>
-                                                </a>
-                                                <a href="./auth-maintenance-minimal.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Minimal</span>
-                                                </a>
-                                                <a href="./auth-maintenance-creative.html" class="dropdown-item">
-                                                    <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                    <span>Creative</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                      
                                 <div class="dropdown-divider"></div>
-                                <a href="javascript:void(0);" class="dropdown-item">
+                                <a href="{{ route('admin.leads.create') }}" class="dropdown-item">
                                     <i class="feather-plus"></i>
-                                    <span>Add New Items</span>
+                                    <span>Add New Lead</span>
                                 </a>
                             </div>
                         </div>
@@ -717,54 +193,7 @@
                                             <a href="javascript:void(0);" class="fs-13 fw-bold text-primary">Get Started &rarr;</a>
                                         </div>
                                         <!--! [End] v-pills-general !-->
-                                        <!--! [Start] v-pills-applications !-->
-                                        <div class="tab-pane fade" id="v-pills-applications" role="tabpanel">
-                                            <div class="row g-4">
-                                                <div class="col-lg-6">
-                                                    <h6 class="dropdown-item-title">Applications</h6>
-                                                    <a href="apps-chat.html" class="dropdown-item">
-                                                        <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                        <span>Chat</span>
-                                                    </a>
-                                                    <a href="apps-email.html" class="dropdown-item">
-                                                        <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                        <span>Email</span>
-                                                    </a>
-                                                    <a href="apps-tasks.html" class="dropdown-item">
-                                                        <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                        <span>Tasks</span>
-                                                    </a>
-                                                    <a href="apps-notes.html" class="dropdown-item">
-                                                        <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                        <span>Notes</span>
-                                                    </a>
-                                                    <a href="apps-storage.html" class="dropdown-item">
-                                                        <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                        <span>Storage</span>
-                                                    </a>
-                                                    <a href="apps-calendar.html" class="dropdown-item">
-                                                        <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                                        <span>Calendar</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="nxl-mega-menu-image">
-                                                        <img src="assets/images/general/full-avatar.png" alt="" class="img-fluid full-user-avtar" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr class="border-top-dashed" />
-                                            <div class="d-lg-flex align-items-center justify-content-between">
-                                                <div>
-                                                    <h6 class="menu-item-heading text-truncate-1-line">Need more application?</h6>
-                                                    <p class="fs-12 text-muted mb-0 text-truncate-3-line">We are ready to build custom applications.</p>
-                                                </div>
-                                                <div class="mt-2 mt-lg-0">
-                                                    <a href="/cdn-cgi/l/email-protection#6512170415060a01001716250208040c094b060a08" class="fs-13 fw-bold text-primary">Contact Us &rarr;</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--! [End] v-pills-applications !-->
+                              
                                         <!--! [Start] v-pills-integrations !-->
                                         <div class="tab-pane fade" id="v-pills-integrations" role="tabpanel">
                                             <div class="row g-lg-4 nxl-mega-menu-integrations">

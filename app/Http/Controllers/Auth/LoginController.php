@@ -13,46 +13,22 @@ use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
-   public function login()
+    public function login()
     {
-       if (Auth::check()) {
-            $user = Auth::user();
-            $currentUser = User::find($user->id);
-            // Check if the user has role 'super-admin' or 'admin'
-              if ($currentUser->hasRole('admin')) {
-                    return view('admin.dashboard')->with('success', "Login successfully!");
-                }
-                else if($currentUser->hasRole('instructor'))
-                {
-                    return redirect()->route('instructor.dashboard')->with('success', "Login successfully!");
-                }
-                else if($currentUser->hasRole('student'))
-                {
-                    return redirect()->route('student.dashboard')->with('success', "Login successfully!");
-                }
-                 else {
-                    return redirect()->route('frontend.home')->with('success', "Login successfully!");
-                }
-            
-        } else {
-            return view('auth.login');
+        if (Auth::check()) {
+            return redirect()->route('admin.dashboard')->with('success', "Already logged in!");
         }
-    }  
+        
+        return view('auth.login');
+    }
 
-public function loginAttempt(Request $request)
+    public function loginAttempt(Request $request)
     {
         // Validate the form
         $rules = [
             'email_username' => 'required|max:50',
             'password' => 'required',
         ];
-
-        // If captcha is used
-        // if (config('captcha.version') !== 'no_captcha') {
-        //     $rules['g-recaptcha-response'] = 'required|captcha';
-        // } else {
-        //     $rules['g-recaptcha-response'] = 'nullable';
-        // }
 
         $validate = Validator::make($request->all(), $rules);
         if ($validate->fails()) {
@@ -61,61 +37,41 @@ public function loginAttempt(Request $request)
 
         try {
             // Determine whether the input is an email or username
-            $userfind = null;
+            $user = null;
             if (filter_var($request->email_username, FILTER_VALIDATE_EMAIL)) {
-                // If it's an email, search by email
-                $userfind = User::where('email', $request->email_username)->first();
+                $user = User::where('email', $request->email_username)->first();
             } else {
-                // If it's not an email, assume it's a username and search by username
-                $userfind = User::where('username', $request->email_username)->first();
+                $user = User::where('username', $request->email_username)->first();
             }
 
-            if ($userfind) {
-                // Check if the password is correct
-                if (Hash::check($request->password, $userfind->password)) {
-                    // Password matched
-                    $remember_me = $request->remember ? true : false;
-                    Auth::attempt(['email' => $userfind->email, 'password' => $request->password], $remember_me);
-
-                    if (Auth::check()) {
-                        // Check if the user has role 'super-admin' or 'admin'
-
-                        if ($userfind->hasRole('admin')) {
-                    return view('admin.dashboard')->with('success', "Login successfully!");
-                }
-                else if($userfind->hasRole('instructor'))
-                {
-                    return redirect()->route('instructor.dashboard')->with('success', "Login successfully!");
-                }
-                else if($userfind->hasRole('student'))
-                {
-                    return redirect()->route('student.dashboard')->with('success', "Login successfully!");
-                }
-                 else {
-                    return redirect()->route('frontend.home')->with('success', "Login successfully!");
-                }
-
-                        if ($userfind->hasRole('super-admin') || $userfind->hasRole('admin')) {
-                            return redirect()->route('dashboard')->with('success', "Login successfully!");
-                        } else {
-                            return redirect()->route('frontend.dashboard')->with('success', "Login successfully!");
-                        }
-
-
-                        // return redirect()->route('dashboard')->with('success', "Login successfully!");
-                    } else {
-                        return redirect()->back()->withInput($request->all())->with('error', 'Authentication Error');
-                    }
-                } else {
-                    return redirect()->back()->withInput($request->all())->with('error', 'Password is mismatch');
-                }
-            } else {
+            if (!$user) {
                 return redirect()->back()->withInput($request->all())->with('error', "Invalid credentials");
             }
+
+            // Check if the password is correct
+            if (!Hash::check($request->password, $user->password)) {
+                return redirect()->back()->withInput($request->all())->with('error', 'Password is incorrect');
+            }
+
+            // For now, allow any authenticated user (role check will be handled by middleware)
+            // You can uncomment the line below once Spatie Permission is properly configured
+            // if (!$user->hasRole('admin')) {
+            //     return redirect()->back()->withInput($request->all())->with('error', 'Access denied. Admin access required.');
+            // }
+
+            // Login the user
+            $remember_me = $request->has('remember');
+            Auth::attempt(['email' => $user->email, 'password' => $request->password], $remember_me);
+
+            if (Auth::check()) {
+                return redirect()->route('admin.dashboard')->with('success', "Login successful!");
+            } else {
+                return redirect()->back()->withInput($request->all())->with('error', 'Authentication Error');
+            }
+
         } catch (\Throwable $th) {
             Log::error("Failed to Login:" . $th->getMessage());
             return redirect()->back()->withInput($request->all())->with('error', "Something went wrong! Please try again later");
         }
     }
-
 }

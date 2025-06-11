@@ -35,7 +35,7 @@ class RegisterController extends Controller
                     return view('admin.dashboard');
                 }
                  else {
-                    return redirect()->route('frontend.home');
+                    // return redirect()->route('frontend.home');
                 }
             } 
             else {

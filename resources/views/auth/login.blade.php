@@ -1,74 +1,82 @@
 @extends('layouts.auth.master')
 
-@section('title', __('Login'))
-@section('description', '')
-@section('keywords', '')
-@section('author', '')
+@section('title', 'Dashboard')
 
 @section('css')
-
 @endsection
 
 @section('content')
 
-<div class="container-fluid">
-      <div class="row">
-        <div class="col-xl-7"><img class="bg-img-cover bg-center" src="{{asset('AdminAssets/images/login/2.jpg')}}" alt="looginpage"></div>
-        <div class="col-xl-5 p-0">
-          <div class="login-card login-dark">
-            <div>
-              <div><a class="logo text-start" href="index.html"><img class="img-fluid for-light" src="{{asset('AdminAssets/images/logo/logo.png')}}" alt="looginpage"><img class="img-fluid for-dark" src="{{asset('AdminAssets/images/logo/logo_dark.png')}}" alt="looginpage"></a></div>
-              <div class="login-main"> 
-                <form class="theme-form" action="{{route('login.attempt')}}" method="POST">
-                  @csrf
-                  <h4>Sign in to account</h4>
-                  <p>Enter your email & password to login</p>
-                  <div class="form-group">
-                    <label class="col-form-label">Email Address</label>
-                    <input class="form-control @error('email_username') is-invalid @enderror" name="email_username" placeholder="Your Email" autofocus required type="email">
-                    @error('email_username')
+
+    <main class="auth-creative-wrapper">
+        <div class="auth-creative-inner">
+            <div class="creative-card-wrapper">
+                <div class="card my-4 overflow-hidden" style="z-index: 1">
+                    <div class="row flex-1 g-0">
+                        <div class="col-lg-6 h-100 my-auto order-1 order-lg-0">
+                            <div class="wd-50 bg-white p-2 rounded-circle shadow-lg position-absolute translate-middle top-50 start-50 d-none d-lg-block">
+                                <img src="" alt="" class="img-fluid">
+                            </div>
+                            <div class="creative-card-body card-body p-sm-5">
+                                <h2 class="fs-20 fw-bolder mb-4">Login</h2>
+                                <h4 class="fs-13 fw-bold mb-2">Login to your account</h4>
+                                <p class="fs-12 fw-medium text-muted">Thank you for get back <strong>Nelel</strong> web applications, let's access our the best recommendation for you.</p>
+                                <form action="{{route('login.attempt')}}" method="POST" class="w-100 mt-4 pt-2">
+                                  @csrf
+                                    <div class="mb-4">
+                                        <input type="email" class="form-control @error('email_username') is-invalid @enderror" name="email_username" placeholder="Your Email" autofocus required>
+                                         @error('email_username')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                  </div>
-                  <div class="form-group">
-                    <label class="col-form-label">Password</label>
-                    <div class="form-input position-relative">
-                      <input type="password" class="form-control @error('password') is-invalid @enderror" name="password"
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password"
                                     placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                    aria-describedby="password" required/>
-
-                      <div class="show-hide"><span class="show">                         </span></div>
-                    </div>
-                      @error('password')
+                                    aria-describedby="password" required />
+                                         @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                  </div>
-                  <div class="form-group mb-0">
-                    <div class="form-check">
-                      <input class="checkbox-primary form-check-input" id="checkbox1" type="checkbox">
-                      <label class="text-muted form-check-label" for="checkbox1">Remember password</label>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                                <label class="custom-control-label c-pointer" for="rememberMe">Remember Me</label>
+                                            </div>
+                                        </div>
+                                        {{-- <div>
+                                            <a href="auth-reset-creative.html" class="fs-11 text-primary">Forget password?</a>
+                                        </div> --}}
+                                    </div>
+                                    <div class="mt-5">
+                                        <button type="submit" class="btn btn-lg btn-primary w-100">Login</button>
+                                    </div>
+                                </form>
+                             
+                                {{-- <div class="mt-5 text-muted">
+                                    <span> Don't have an account?</span>
+                                    <a href="auth-register-creative.html" class="fw-bold">Create an Account</a>
+                                </div> --}}
+                            </div>
+                        </div>
+                        <div class="col-lg-6 bg-primary order-0 order-lg-1">
+                            <div class="h-100 d-flex align-items-center justify-content-center">
+                                <img src="{{asset('assets/images/auth/auth-user.png')}}" alt="" class="img-fluid">
+                            </div>
+                        </div>
                     </div>
-                    <button class="btn btn-primary btn-block w-100 mt-3" type="submit">Sign in</button>
-                  </div>
-                  <h6 class="text-muted mt-4 or">Or Sign in with</h6>
-                  <div class="social mt-4">
-                    <div class="btn-showcase"><a class="btn btn-light" href="https://www.linkedin.com/login" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a><a class="btn btn-light" href="https://twitter.com/login?lang=en" target="_blank"><i class="fa-brands fa-x-twitter"></i></a><a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a class="btn btn-light" href="https://www.google.com/" target="_blank"><i class="fa-brands fa-google"></i></a></div>
-                  </div>
-                  <p class="mt-4 mb-0 text-center">Don't have account?<a class="ms-2" href="{{route('register')}}">Create Account</a></p>
-                </form>
-              </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      
-    </div>
+    </main>
 
-    @endsection
+
+
+        @endsection
 
 @section('script')
 @endsection
