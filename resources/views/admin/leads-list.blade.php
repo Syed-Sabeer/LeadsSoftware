@@ -176,9 +176,9 @@
                                                 </td>
                                                 <td>
                                                     <a href="{{ route('admin.leads.show', $lead->id) }}" class="hstack gap-3">
-                                                        <div class="avatar-image avatar-md">
+                                                        {{-- <div class="avatar-image avatar-md">
                                                             <img src="{{ asset('assets/images/avatar/1.png') }}" alt="" class="img-fluid">
-                                                        </div>
+                                                        </div> --}}
                                                         <div>
                                                             <span class="text-truncate-1-line">{{ $lead->fullname ?? 'N/A' }}</span>
                                                         </div>
