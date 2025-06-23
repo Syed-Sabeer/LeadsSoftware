@@ -120,7 +120,7 @@
                         <!--! [End] nxl-lavel-menu !-->
                         <!--! [Start] nxl-h-item nxl-mega-menu !-->
                         <div class="dropdown nxl-h-item nxl-mega-menu">
-                            <a href="javascript:void(0);" class="btn btn-light-brand" data-bs-toggle="dropdown" data-bs-auto-close="outside"> Mega Menu </a>
+                            {{-- <a href="javascript:void(0);" class="btn btn-light-brand" data-bs-toggle="dropdown" data-bs-auto-close="outside"> Mega Menu </a> --}}
                             <div class="dropdown-menu nxl-h-dropdown" id="mega-menu-dropdown">
                                 <div class="d-lg-flex align-items-start">
                                     <!--! [Start] nxl-mega-menu-tabs !-->
@@ -630,7 +630,7 @@
                                                                                 <div class="avatar-image avatar-sm">
                                                                                     <img src="assets/images/avatar/1.png" alt="" class="img-fluid" />
                                                                                 </div>
-                                                                                <a href="javascript:void(0);" class="fs-12">Alexandra Della</a>
+                                                                                <a href="javascript:void(0);" class="fs-12">Admin</a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1094,7 +1094,7 @@
             <!--! [Start] Header Right !-->
             <div class="header-right ms-auto">
                 <div class="d-flex align-items-center">
-                    <div class="dropdown nxl-h-item nxl-header-search">
+                    {{-- <div class="dropdown nxl-h-item nxl-header-search">
                         <a href="javascript:void(0);" class="nxl-head-link me-0" data-bs-toggle="dropdown" data-bs-auto-close="outside">
                             <i class="feather-search"></i>
                         </a>
@@ -1296,8 +1296,8 @@
                                 <a href="javascript:void(0);" class="p-3 fs-10 fw-bold text-uppercase text-center d-block">Loar More</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="dropdown nxl-h-item nxl-header-language d-none d-sm-flex">
+                    </div> --}}
+                    {{-- <div class="dropdown nxl-h-item nxl-header-language d-none d-sm-flex">
                         <a href="javascript:void(0);" class="nxl-head-link me-0 nxl-language-link" data-bs-toggle="dropdown" data-bs-auto-close="outside">
                             <img src="assets/vendors/img/flags/4x3/us.svg" alt="" class="img-fluid wd-20" />
                         </a>
@@ -1390,15 +1390,15 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="nxl-h-item d-none d-sm-flex">
+                    </div> --}}
+                    {{-- <div class="nxl-h-item d-none d-sm-flex">
                         <div class="full-screen-switcher">
                             <a href="javascript:void(0);" class="nxl-head-link me-0" onclick="$('body').fullScreenHelper('toggle');">
                                 <i class="feather-maximize maximize"></i>
                                 <i class="feather-minimize minimize"></i>
                             </a>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="nxl-h-item dark-light-theme">
                         <a href="javascript:void(0);" class="nxl-head-link me-0 dark-button">
                             <i class="feather-moon"></i>
@@ -1407,7 +1407,7 @@
                             <i class="feather-sun"></i>
                         </a>
                     </div>
-                    <div class="dropdown nxl-h-item">
+                    {{-- <div class="dropdown nxl-h-item">
                         <a href="javascript:void(0);" class="nxl-head-link me-0" data-bs-toggle="dropdown" role="button" data-bs-auto-close="outside">
                             <i class="feather-clock"></i>
                             <span class="badge bg-success nxl-h-badge">2</span>
@@ -1429,8 +1429,8 @@
                                 <a href="javascript:void(0);" class="fs-13 fw-semibold text-dark">Alls Timesheets</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="dropdown nxl-h-item">
+                    </div> --}}
+                    {{-- <div class="dropdown nxl-h-item">
                         <a class="nxl-head-link me-3" data-bs-toggle="dropdown" href="#" role="button" data-bs-auto-close="outside">
                             <i class="feather-bell"></i>
                             <span class="badge bg-danger nxl-h-badge">3</span>
@@ -1492,22 +1492,24 @@
                                 <a href="javascript:void(0);" class="fs-13 fw-semibold text-dark">Alls Notifications</a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="dropdown nxl-h-item">
                         <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button" data-bs-auto-close="outside">
-                            <img src="assets/images/avatar/1.png" alt="user-image" class="img-fluid user-avtar me-0" />
+                            <img src="{{asset('assets/images/avatar/1.png')}}" alt="user-image" class="img-fluid user-avtar me-0" />
                         </a>
                         <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-user-dropdown">
                             <div class="dropdown-header">
                                 <div class="d-flex align-items-center">
                                     <img src="assets/images/avatar/1.png" alt="user-image" class="img-fluid user-avtar" />
                                     <div>
-                                        <h6 class="text-dark mb-0">Alexandra Della <span class="badge bg-soft-success text-success ms-1">PRO</span></h6>
-                                        <span class="fs-12 fw-medium text-muted"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d6c61687523696861616c4d62787961626266236e6260">[email&#160;protected]</a></span>
+                                        <h6 class="text-dark mb-0">Admin 
+                                            {{-- <span class="badge bg-soft-success text-success ms-1">PRO</span> --}}
+                                        </h6>
+                                        <span class="fs-12 fw-medium text-muted"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d6c61687523696861616c4d62787961626266236e6260">admin@gmail.com</a></span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="dropdown">
+                            {{-- <div class="dropdown">
                                 <a href="javascript:void(0);" class="dropdown-item" data-bs-toggle="dropdown">
                                     <span class="hstack">
                                         <i class="wd-10 ht-10 border border-2 border-gray-1 bg-success rounded-circle me-2"></i>
@@ -1554,9 +1556,9 @@
                                         </span>
                                     </a>
                                 </div>
-                            </div>
-                            <div class="dropdown-divider"></div>
-                            <div class="dropdown">
+                            </div> --}}
+                            {{-- <div class="dropdown-divider"></div> --}}
+                            {{-- <div class="dropdown">
                                 <a href="javascript:void(0);" class="dropdown-item" data-bs-toggle="dropdown">
                                     <span class="hstack">
                                         <i class="feather-dollar-sign me-2"></i>
@@ -1603,8 +1605,8 @@
                                         </span>
                                     </a>
                                 </div>
-                            </div>
-                            <div class="dropdown-divider"></div>
+                            </div> --}}
+                            {{-- <div class="dropdown-divider"></div>
                             <a href="javascript:void(0);" class="dropdown-item">
                                 <i class="feather-user"></i>
                                 <span>Profile Details</span>
@@ -1616,8 +1618,8 @@
                             <a href="javascript:void(0);" class="dropdown-item">
                                 <i class="feather-dollar-sign"></i>
                                 <span>Billing Details</span>
-                            </a>
-                            <a href="javascript:void(0);" class="dropdown-item">
+                            </a> --}}
+                            {{-- <a href="javascript:void(0);" class="dropdown-item">
                                 <i class="feather-bell"></i>
                                 <span>Notifications</span>
                             </a>
@@ -1629,7 +1631,7 @@
                             <a href="./auth-login-minimal.html" class="dropdown-item">
                                 <i class="feather-log-out"></i>
                                 <span>Logout</span>
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                 </div>

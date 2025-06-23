@@ -30,7 +30,7 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="avatar-text avatar-lg bg-primary">
-                                <i class="fas fa-users"></i>
+                                <i class="fas fa-users" style="color: #fff;"></i>
                             </div>
                             <div class="ms-3">
                                 <h4 class="mb-0">{{ $totalLeads }}</h4>
@@ -46,7 +46,7 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="avatar-text avatar-lg bg-success">
-                                <i class="fas fa-trophy"></i>
+                                <i class="fas fa-trophy" style="color: #fff;"></i>
                             </div>
                             <div class="ms-3">
                                 <h4 class="mb-0">{{ $convertedLeads }}</h4>
@@ -62,7 +62,7 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="avatar-text avatar-lg bg-warning">
-                                <i class="fas fa-clock"></i>
+                                <i class="fas fa-clock" style="color: #fff;"></i>
                             </div>
                             <div class="ms-3">
                                 <h4 class="mb-0">{{ $activeLeads }}</h4>
@@ -78,7 +78,7 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div class="avatar-text avatar-lg bg-info">
-                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star" style="color: #fff;"></i>
                             </div>
                             <div class="ms-3">
                                 <h4 class="mb-0">{{ $qualifiedLeads }}</h4>
