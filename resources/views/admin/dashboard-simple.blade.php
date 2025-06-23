@@ -6,24 +6,25 @@
 <div class="container-fluid">
     <div class="nxl-content-inner">
         <!-- Page Header -->
-        <div class="row">
-            <div class="col-12">
-                <div class="page-header">
-                    <div class="page-header-left">
-                        <h1 class="page-title">Admin Dashboard</h1>
-                        <p class="page-description">Welcome to your leads management system</p>
-                    </div>
-                    <div class="page-header-right">
-                        <a href="{{ route('admin.leads.create') }}" class="btn btn-primary">
-                            <i class="fas fa-plus"></i> Add New Lead
-                        </a>
-                    </div>
-                </div>
+    <div class="row mt-2">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-3 mt-2">
+            <div>
+                <h1 class="page-title">Admin Dashboard</h1>
+                <p class="page-description">Welcome to your leads management system</p>
+            </div>
+            <div>
+                <a href="{{ route('admin.leads.create') }}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add New Lead
+                </a>
             </div>
         </div>
+    </div>
+</div>
+
 
         <!-- Statistics Cards -->
-        <div class="row mb-4">
+        <div class="row mb-4 mt-3">
             <div class="col-xl-3 col-lg-6 col-md-6">
                 <div class="card">
                     <div class="card-body">
